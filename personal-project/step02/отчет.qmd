@@ -1,0 +1,86 @@
+---
+## Front matter
+title: "Отчёт по индивидуальному проекту  №2"
+subtitle: "Дисциплина: Основы информационной безопасности"
+author: "Кузьмина Мария Константиновна"
+
+
+## Pdf output format
+toc: true # Table of contents
+toc-depth: 2
+lof: true # List of figures
+fontsize: 12pt
+linestretch: 1.5
+papersize: a4
+documentclass: scrreprt
+
+## I18n polyglossia
+polyglossia-lang:
+  name: russian
+  options:
+    - spelling=modern
+    - babelshorthands=true
+polyglossia-otherlangs:
+  name: english
+
+## I18n babel
+babel-lang: russian
+babel-otherlangs: english
+
+## Fonts
+mainfont: Liberation Serif
+sansfont: Liberation Sans
+monofont: Liberation Mono
+mathfont: Liberation Serif
+mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase
+monofontoptions: Scale=MatchLowercase
+
+
+## Misc options
+indent: true
+header-includes:
+  - \usepackage{indentfirst}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+  - \renewcommand{\contentsname}{Содержание}
+  - \renewcommand{\listfigurename}{Список иллюстраций}
+---
+
+# Цель работы
+
+Установка DVWA
+
+# Задание
+
+1. Установить и настроить DVWA
+
+# Выполнение 
+
+## Установка
+
+Обновляем список пакетов, устанавливаем необходимые компоненты (рис.1)
+
+![снимок экрана](image/1.png){width=90%}
+
+## Запуск сервисов Apache и MySQL
+
+Запускаем Apache, запускаем Mariadb(MySQL), проверяем, что оба сервиса работают (рис.2)
+
+![снимок экрана](image/2.png){width=100%}
+
+## Клонирование репозитория, настройка прав доступа, конфигурационного файла
+
+Переходим в директорию /var/www/html/, клонируем репозиторий, устанавливаем правильные права. В редакторе  находим строки, отвечающие за подключение к базе данных данные, изменяем данные на те, которые указывали ранее (имя, пароль) (рис.3)
+
+![снимок экрана](image/3.png){width=100%}
+
+## Инициализация DVWA через веб-интерфейс
+
+Открываем браузер, переходим по ссылке http://127.0.0.1/DVWA/, входим с учетными данными по умолчанию, устанавливаем уровень безопасности (пока low), переходим в раздел 'SQL Injection', в поле вводим 'or 1=1', появляются ссылки на веб-страницы (рис.4)
+
+![снимок экрана](image/4.png){width=100%}
+
+# Выводы
+
+Установка прошла успешно
